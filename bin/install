@@ -22,6 +22,9 @@ fi
 client_message "Installing ${npmglobals} globally..."
 npm install ${npmglobals} -g
 
+client_message "Installing ${OPENSHIFT_RUBY_GEMS} globally..."
+gem install --no-ri --no-rdoc ${OPENSHIFT_RUBY_GEMS}
+
 print_spaced_msg "Installed global npm modules successfully"
 
 path_append
