@@ -2,14 +2,14 @@ Name: node-four
 Cartridge-Short-Name: NODE4
 Display-Name: node v4
 Description: "Node.js v4 cartridge"
-Version: '1.0.0'
-Source-Url: https://github.com/connyay/openshift-node4.git
+Version: '1.2.0'
+Source-Url: https://github.com/keithrob/openshift-node4.git
 License: "Apache v2"
-License-Url: https://github.com/connyay/openshift-node4/blob/master/LICENSE
-Cartridge-Version: 0.1
-Compatible-Versions: ['0.1']
-Cartridge-Vendor: connyay
-Vendor: connyay
+License-Url: https://github.com/keithrob/openshift-node4/blob/master/LICENSE
+Cartridge-Version: 0.2
+Compatible-Versions: ['0.2']
+Cartridge-Vendor: keithrob
+Vendor: keithrob
 Categories:
   - service
   - javascript
@@ -47,9 +47,8 @@ Cart-Data:
     Type: environment
     Description: "Unique ID which identified the gear. This value changes between gears."
 Provides:
-  - nodejs-0.10
+  - nodejs-4.1.1
   - "nodejs"
-  - iojs
 Publishes:
   get-doc-root:
     Type: "FILESYSTEM:doc-root"
@@ -75,7 +74,7 @@ Scaling:
   Max: -1
 Group-Overrides:
   - components:
-    - nodejs-0.10
+    - nodejs-4.1.1
     - web_proxy
 Endpoints:
   - Private-IP-Name:   IP
