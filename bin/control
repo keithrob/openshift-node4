@@ -1,10 +1,11 @@
 #!/bin/bash
 
 function is_node_running {
-    if [ -f ${OPENSHIFT_NODEDIY_DIR}server.pid ]; then
+    if [ -f ${OPENSHIFT_NODE4_DIR}server.pid ]; then
         return 0
+    else
+        return 1
     fi
-    ps axco command | grep -w '^node$' > /dev/null
 }
 
 function pidlist() {
@@ -46,7 +47,7 @@ function start() {
         sleep 3
         echo `pidlist $npm_pid` > ${OPENSHIFT_NODE4_DIR}server.pid
     else
-        client_message "npm start requires a package.json file, and we could not find one."
+        client_message "npm start requires a package.json file, and we could not find one in ${OPENSHIFT_NODE4_DIR}."
     fi
 }
 
@@ -72,10 +73,7 @@ function restart() {
 }
 
 function reload() {
-    source "${OPENSHIFT_NODEDIY_DIR}lib/util"
-    client_message "Reloading cartridge"
-    install
-    client_message "Restarting cartridge"
+    client_message "Unsupported function.  Restarting cartridge."
     restart
 }
 
