@@ -1,3 +1,6 @@
+<p align="center"><img src="https://cloud.githubusercontent.com/assets/129737/10396435/6f2cc8ee-6e70-11e5-8907-5b259b478c91.png"/></p>
+
+
 # [node.js v4](https://nodejs.org/) cartridge for [OpenShift](https://www.openshift.com/)
 
 ## Usage
